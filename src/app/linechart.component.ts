@@ -11,7 +11,7 @@ import $ from 'jquery';
   styles: [
     `
   .mGraph-wrapper{
-    width: 100%;
+    width: 1000px;
     height: 239px;
     background: #fff;
     position: relative;
@@ -28,7 +28,7 @@ import $ from 'jquery';
 })
 export class LinechartComponent implements OnInit {
  
-  timestamp = ['1668763566246', '1668763566248', '1668763566249', '1668763585353', '1668763566246', '1668763585353'];
+  timestamp = ['100', '200', '300', '400', '500', '600'];
   temperature = ['6.6171', '5.5171', '4.4171', '3.3171'];
   constructor(private elm: ElementRef) {}
   ngOnInit() {
