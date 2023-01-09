@@ -27,25 +27,15 @@ import $ from 'jquery';
   ],
 })
 export class LinechartComponent implements OnInit {
-  base = +new Date(1968, 9, 1);
-  oneDay = 24 * 3600 * 1000;
-  date = [];
-  data = [Math.random() * 100];
+ 
+  timestamp = ['1668763566246', '1668763566246', '1668763566246', '1668763566246', '1668763566246', '1668763566246'];
+  temperature = [6.6171, 6.6171, 6.6171, 6.6171, 6.6171, 6.6171, 6.6171, 6.6171, 6.6171];
   constructor(private elm: ElementRef) {}
   ngOnInit() {
     
     let lineChart = echarts.init(
       $(this.elm.nativeElement).find('#lineChart')[0]
     );
-    for (var i = 1; i < 100; i++) {
-      var now = new Date((this.base += this.oneDay));
-      this.date.push(
-        [now.getFullYear(), now.getMonth(), now.getDate()].join('/')
-      );
-      this.data.push(Math.round((Math.random() - 0.5) * 20 + this.data[i - 1]));
-    }
-
-    console.log(this.date);
     
     lineChart.setOption({
       tooltip: {
@@ -75,7 +65,7 @@ export class LinechartComponent implements OnInit {
       xAxis: {
         type: 'category',
         boundaryGap: false,
-        data: this.date,
+        data: this.timestamp,
       },
       yAxis: {
         type: 'value',
@@ -124,7 +114,7 @@ export class LinechartComponent implements OnInit {
               },
             ]),
           },
-          data: this.data,
+          data: this.temperature,
         },
       ],
     });
