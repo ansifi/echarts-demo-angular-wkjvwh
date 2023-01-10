@@ -79,21 +79,6 @@ const data = [["2000-06-05",],["2000-06-06",],["2000-06-07",135],["2000-06-08",8
         tooltip: {
           trigger: 'axis'
         },
-        xAxis: [
-          {
-            data: dateList
-          },
-          {
-            data: dateList,
-            gridIndex: 1
-          }
-        ],
-        yAxis: [
-          {},
-          {
-            gridIndex: 1
-          }
-        ],
         grid: [
           {
             bottom: '60%'
@@ -115,7 +100,22 @@ const data = [["2000-06-05",],["2000-06-06",],["2000-06-07",135],["2000-06-08",8
             xAxisIndex: 1,
             yAxisIndex: 1
           }
-        ]
+        ],
+        xAxis: [
+          {
+            data: dateList
+          },
+          {
+            data: dateList,
+            gridIndex: 1
+          }
+        ],
+        yAxis: [
+          {},
+          {
+            gridIndex: 1
+          }
+        ],
     });
   }
 }
