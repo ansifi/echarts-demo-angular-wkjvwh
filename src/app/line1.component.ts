@@ -12,7 +12,7 @@ import $ from 'jquery';
     `
   .mGraph-wrapper{
     width: 1000px;
-    height: 239px;
+    height: 700px;
     background: #fff;
     position: relative;
     display: flex;
