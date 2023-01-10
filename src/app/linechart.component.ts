@@ -28,7 +28,7 @@ import $ from 'jquery';
 })
 export class LinechartComponent implements OnInit {
  
-  timestamp = ['100', '200', '300', '400', '500', '600'];
+  timestamp = ['10', '20', '30', '100', '200', '300', '400', '500', '600'];
   temperature = ['6.6171', '5.5171', '4.4171', '3.3171'];
   constructor(private elm: ElementRef) {}
   ngOnInit() {
